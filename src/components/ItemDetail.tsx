@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart, Star, Clock, Heart, Minus, Plus } from 'lucide-react';
 
+// Import images
+import pancakesPearOrange from '../assets/pancakes-pear-orange.jpg';
+import meatMushrooms from '../assets/meat-mushrooms.jpg';
+import eggBread from '../assets/egg-bread.jpg';
+
 const ItemDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -13,18 +18,18 @@ const ItemDetail = () => {
   const item = {
     id: 1,
     name: 'Pear & Orange',
-    price: 25.00,
+    price: 950.00,
     time: '30 min',
     rating: 4.8,
-    image: '/lovable-uploads/785c4ab8-1c24-493f-a417-a020c1d6a8da.png',
+    image: pancakesPearOrange,
     category: 'Breakfast',
     description: 'As a rule, pancakes are served for breakfast with various sweet sauces, chocolate, berries, maple syrup. Pancakes were a very popular breakfast only in the USA and Canada, but now pancakes enjoy breakfast all over the world.'
   };
 
   const recentlyViewed = [
-    { id: 2, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=150' },
-    { id: 3, image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=150' },
-    { id: 4, image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=150' }
+    { id: 2, image: meatMushrooms },
+    { id: 3, image: eggBread },
+    { id: 4, image: pancakesPearOrange }
   ];
 
   const handleQuantityChange = (increment: boolean) => {
@@ -35,7 +40,7 @@ const ItemDetail = () => {
     }
   };
 
-  const totalPrice = (item.price * quantity).toFixed(2);
+  const totalPrice = (item.price * quantity).toFixed(0);
 
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen shadow-2xl relative">
@@ -89,7 +94,7 @@ const ItemDetail = () => {
         </div>
 
         <div className="text-2xl font-bold text-gray-800 mb-4">
-          {item.price.toFixed(2)}$
+          ₹{item.price.toFixed(0)}
         </div>
 
         {/* Description */}
@@ -141,7 +146,7 @@ const ItemDetail = () => {
           </div>
 
           <button className="flex-1 bg-emerald-600 text-white py-4 rounded-2xl font-semibold hover:bg-emerald-700 transition-colors">
-            Add to cart • {totalPrice}$
+            Add to cart • ₹{totalPrice}
           </button>
         </div>
       </div>

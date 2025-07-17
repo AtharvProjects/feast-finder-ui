@@ -5,6 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import MenuCard from './MenuCard';
 import CategoryTabs from './CategoryTabs';
 
+// Import images
+import pancakesPearOrange from '../assets/pancakes-pear-orange.jpg';
+import meatMushrooms from '../assets/meat-mushrooms.jpg';
+import eggBread from '../assets/egg-bread.jpg';
+import sweetPancakes from '../assets/sweet-pancakes.jpg';
+import salmonDelight from '../assets/salmon-delight.jpg';
+import pastaSpecial from '../assets/pasta-special.jpg';
+
 const MenuPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
@@ -15,60 +23,60 @@ const MenuPage = () => {
     {
       id: 1,
       name: 'Pear & Orange',
-      price: 25.00,
+      price: 950.00,
       time: '30 min',
       rating: 4.8,
-      image: '/lovable-uploads/785c4ab8-1c24-493f-a417-a020c1d6a8da.png',
+      image: pancakesPearOrange,
       category: 'Breakfast',
       description: 'As a rule, pancakes are served for breakfast with various sweet sauces, chocolate, berries, maple syrup. Pancakes were a very popular breakfast only in the USA and Canada, but now pancakes enjoy breakfast all over the world.'
     },
     {
       id: 2,
       name: 'Meat & Mushrooms',
-      price: 37.00,
+      price: 1400.00,
       time: '30 min',
       rating: 5.0,
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400',
+      image: meatMushrooms,
       category: 'Lunch',
       description: 'Savory combination of tender meat and fresh mushrooms, perfectly seasoned and cooked to perfection.'
     },
     {
       id: 3,
       name: 'Egg & Bread',
-      price: 25.00,
+      price: 950.00,
       time: '15 min',
       rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400',
+      image: eggBread,
       category: 'Breakfast',
       description: 'Classic breakfast combination with perfectly cooked eggs and fresh artisanal bread.'
     },
     {
       id: 4,
       name: 'Sweet Pancake',
-      price: 18.00,
+      price: 680.00,
       time: '20 min',
       rating: 4.9,
-      image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400',
+      image: sweetPancakes,
       category: 'Dessert',
       description: 'Fluffy pancakes topped with fresh berries and maple syrup for the perfect sweet treat.'
     },
     {
       id: 5,
       name: 'Salmon Delight',
-      price: 42.00,
+      price: 1580.00,
       time: '25 min',
       rating: 4.6,
-      image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400',
+      image: salmonDelight,
       category: 'Lunch',
       description: 'Fresh Atlantic salmon with seasonal vegetables and herb butter sauce.'
     },
     {
       id: 6,
       name: 'Pasta Special',
-      price: 28.00,
+      price: 1050.00,
       time: '20 min',
       rating: 4.5,
-      image: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400',
+      image: pastaSpecial,
       category: 'Lunch',
       description: 'Homemade pasta with rich tomato sauce and fresh basil leaves.'
     }

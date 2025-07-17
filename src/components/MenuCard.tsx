@@ -49,7 +49,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ item, onClick }) => {
         </div>
         
         <div className="font-bold text-gray-800">
-          {item.price.toFixed(2)}$
+          ₹{item.price.toFixed(0)}
         </div>
       </div>
     </div>

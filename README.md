@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# Restaurant Menu Application
 
-## Project info
+A beautiful and responsive restaurant menu application built with React, TypeScript, and modern web technologies.
 
-**URL**: https://lovable.dev/projects/ebd6364d-14ec-4dae-89e1-a3b34fe67463
+## Features
 
-## How can I edit this code?
+- Interactive menu display with categories
+- Search functionality
+- Item detail views
+- Responsive design
+- Modern UI with smooth animations
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **Vite** - Build tool for fast development
+- **TypeScript** - Type safety and better developer experience
+- **React** - UI library for building user interfaces
+- **shadcn-ui** - Re-usable components built using Radix UI and Tailwind CSS
+- **Tailwind CSS** - Utility-first CSS framework
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ebd6364d-14ec-4dae-89e1-a3b34fe67463) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open your browser and navigate to `http://localhost:5173`
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/          # React components
+├── assets/             # Images and static assets
+├── lib/               # Utility functions
+└── pages/             # Page components
 ```
 
-**Edit a file directly in GitHub**
+## Building for Production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To build the application for production:
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ebd6364d-14ec-4dae-89e1-a3b34fe67463) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The built files will be in the `dist` directory.
