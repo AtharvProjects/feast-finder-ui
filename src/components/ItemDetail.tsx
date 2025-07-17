@@ -42,6 +42,23 @@ const ItemDetail = () => {
 
   const totalPrice = (item.price * quantity).toFixed(0);
 
+  const handleBottomNavClick = (page: string) => {
+    switch(page) {
+      case 'menu':
+        navigate('/');
+        break;
+      case 'favorites':
+        navigate('/favorites');
+        break;
+      case 'orders':
+        navigate('/orders');
+        break;
+      case 'profile':
+        navigate('/profile');
+        break;
+    }
+  };
+
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen shadow-2xl relative">
       {/* Header Image */}
@@ -154,22 +171,34 @@ const ItemDetail = () => {
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-100 px-4 py-3">
         <div className="flex justify-around items-center">
-          <div className="flex flex-col items-center opacity-60">
-            <div className="w-2 h-2 bg-emerald-600 rounded-full mb-1"></div>
-            <span className="text-emerald-600 text-sm font-medium">Menu</span>
-          </div>
-          <div className="flex flex-col items-center opacity-60">
+          <button 
+            onClick={() => handleBottomNavClick('menu')}
+            className="flex flex-col items-center opacity-60"
+          >
+            <div className="w-2 h-2 bg-transparent rounded-full mb-1"></div>
+            <span className="text-gray-500 text-sm">Menu</span>
+          </button>
+          <button 
+            onClick={() => handleBottomNavClick('favorites')}
+            className="flex flex-col items-center opacity-60"
+          >
             <div className="w-6 h-6 mb-1">❤️</div>
             <span className="text-gray-500 text-sm">Favorites</span>
-          </div>
-          <div className="flex flex-col items-center opacity-60">
+          </button>
+          <button 
+            onClick={() => handleBottomNavClick('orders')}
+            className="flex flex-col items-center opacity-60"
+          >
             <div className="w-6 h-6 mb-1">📋</div>
             <span className="text-gray-500 text-sm">Orders</span>
-          </div>
-          <div className="flex flex-col items-center opacity-60">
+          </button>
+          <button 
+            onClick={() => handleBottomNavClick('profile')}
+            className="flex flex-col items-center opacity-60"
+          >
             <div className="w-6 h-6 mb-1">👤</div>
             <span className="text-gray-500 text-sm">Profile</span>
-          </div>
+          </button>
         </div>
       </div>
     </div>
